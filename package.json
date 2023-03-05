@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint --fix {src,test}/**/*.{js,ts,jsx,tsx} --no-error-on-unmatched-pattern"
+    "lint": "eslint --fix {src,test}/**/*.{js,ts,jsx,tsx} --no-error-on-unmatched-pattern",
+    "success-message": "echo Thanks for committing $GIT_AUTHOR_NAME"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "post-commit": "npm run success-message"
     }
   },
   "lint-staged": {
