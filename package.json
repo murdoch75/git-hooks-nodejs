@@ -27,7 +27,7 @@
   "lint-staged": {
     "*.js": [
       "eslint",
-      "jest --findRelatedTests"
+      "jest --clearCache --maxWorkers=50% --findRelatedTests --passWithNoTests"
     ]
   }
 }
